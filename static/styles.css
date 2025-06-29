@@ -1,0 +1,174 @@
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://t3.ftcdn.net/jpg/07/82/30/28/360_F_782302860_PqC4MaTJ9XIKmGNjQelNUhv1me7goSuB.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #7852a5;
+  padding: 40px;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(199, 157, 236, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(80, 0, 110, 0.25);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #6b0ba7;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Layout */
+.tracker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.form-section, .summary-section {
+  flex: 1;
+  min-width: 340px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ba68c8;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f8eafe;
+  color: #4a148c;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #8e24aa;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 6px 10px;
+  background-color: #8e24aa;
+  color: white;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #6a1b9a;
+  transform: scale(1.05);
+}
+
+/* Reset Buttons */
+.reset, .reset-budget {
+  background-color: #ab47bc;
+}
+
+.reset:hover, .reset-budget:hover {
+  background-color: #8e24aa;
+}
+
+/* Budget and Reset on same line */
+.budget-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Summary Box */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #ede7f6;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 6px rgba(140, 0, 200, 0.15);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: inset 0 1px 6px rgba(140, 0, 200, 0.15); }
+  50% { box-shadow: inset 0 1px 12px rgba(140, 0, 200, 0.3); }
+}
+
+.summary p {
+  font-size: 17px;
+  color: #4a148c;
+}
+
+#total-budget { color: #7b1fa2; }
+#total-expenses { color: #9c27b0; }
+#budget-left { color: #6a1b9a; }
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: #f3e5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ce93d8;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #9739a7;
+  color: #dacdeb;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #ab47bc;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+  background-color: #8e24aa;
+  transform: scale(1.05);
+}
